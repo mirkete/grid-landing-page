@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+.big-title{
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 80px;
+}
+
+.medium-title{
+  font-size: 2.3rem;
+}
+
+.subtitle{
+  font-size: 1.6rem;
+}
+
+.normal-text{
+  font-size: 1.2rem;
+  color: rgb(67, 67, 67);
+  line-height: 30px;
+}
+
+.small-text{
+  font-size: 1rem;
+}
+
+.wrapper{
+  padding: 10px 20px;
+  gap: 20px;
+  display: grid;
+  grid-template: 80px auto / 1fr;
+}
+
+.navigation{
+  flex: 1 0 100%;
+  display: none;
+}
+
+.header{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  margin: 0;
+  flex:0 1 90px;
+}
+
+.navigation > ul{
+  margin: 0;
+  list-style-type:none;
+}
+
+.wrap-right{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.toggle-theme{
+  width: 65px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid rgb(201, 201, 201);
+  position: relative;
+}
+
+.circle{
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 50%;
+}
+
+.circle-on{
+  background-color: #d0bd2a;
+  right: 3px;
+  transform: translate(0, -50%);
+}
+
+.circle-off{
+  background-color: rgb(8, 2, 23);
+  left: 3px;
+  transform: translate(0, -50%);
+}
+
+.toggle-navigation{
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-content: center;
+}
+
+.content{
+  display: grid;
+  grid-template: 250px 1fr / 1fr;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.landing-text{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+.landing-text > *{
+  flex: 1 1 100%;
+}
+
+.buttons{
+  flex: 1 1 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.button{
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  outline:none;
+  border: none;
+  font-weight: 600;
+}
+
+.bg-button{
+  background-color: #2B4ED0;
+  color: white;
+}
+
+.image-container{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image{
+  background:url("./src/hero-image-simple-homepage.png") no-repeat;
+  flex: 1 1 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (min-width:800px){
+  .content{
+    grid-template: 1fr / 1fr 1fr;
+    min-height: 70vh;
+    align-content: center;
+  }
+  .landing-text{
+    grid-area: 1 / auto / 2 / auto;
+  }
+}
